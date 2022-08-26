@@ -5,9 +5,11 @@ import csv
 @lru_cache
 def read(path):
     with open(path) as f:
+        arr = []
         file = csv.reader(f, delimiter=",", quotechar='"')
-        header, *data = file
-        return data
+        for files in file:
+            arr.append(files)
+        return arr
     """Reads a file from a given path and returns its contents
 
     Parameters
