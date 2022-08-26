@@ -6,7 +6,7 @@ import csv
 def read(path):
     with open(path) as f:
         arr = []
-        file = csv.reader(f, delimiter=",", quotechar='"')
+        file = csv.DictReader(f, delimiter=",", quotechar='"')
         for files in file:
             arr.append(files)
         return arr
