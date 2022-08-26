@@ -7,7 +7,7 @@ def get_unique_job_types(path):
 
     for job in jobs:
         jobs_type.add(job["job_type"])
-        return list(jobs_type)
+    return list(jobs_type)
 
 
 def filter_by_job_type(jobs, job_type):
@@ -16,7 +16,7 @@ def filter_by_job_type(jobs, job_type):
     for job in jobs:
         if job["job_type"] == job_type:
             filter_jobs.append(job)
-        return filter_jobs
+    return filter_jobs
 
 
 def get_unique_industries(path):
@@ -35,7 +35,7 @@ def filter_by_industry(jobs, industry):
     for job in jobs:
         if job["industry"] == industry:
             filter_industry.append(job)
-        return filter_industry
+    return filter_industry
 
 
 def get_max_salary(path):
